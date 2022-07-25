@@ -15,15 +15,15 @@ import java.math.BigDecimal;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = false)
 public class ItemResponse {
-    private @JsonProperty("product") String product;
+    private @JsonProperty("produto") String produto;
 
-    private @JsonProperty("variety") String variety;
+    private @JsonProperty("variedade") String variedade;
 
-    private @JsonProperty("country") String country;
+    private @JsonProperty("pais") String pais;
 
     private @JsonProperty("categoria") String categoria;
 
-    private @JsonProperty("safra") Integer safra;
+    private @JsonProperty("safra") String safra;
 
     private @JsonProperty("preco") BigDecimal preco;
 }

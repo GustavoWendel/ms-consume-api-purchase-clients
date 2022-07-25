@@ -1,7 +1,7 @@
 package com.br.spring.api.desafioibm.application;
 
-import com.br.spring.api.desafioibm.infra.clients.ClientFeignClient;
-import com.br.spring.api.desafioibm.response.ClientResponse;
+import com.br.spring.api.desafioibm.infra.clients.ClienteFeignClient;
+import com.br.spring.api.desafioibm.response.ClienteResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +14,10 @@ import java.util.List;
 @RequestMapping("/clients")
 public class ClientController {
 
-    private final ClientFeignClient clientClient;
+    private final ClienteFeignClient clientClient;
 
     @GetMapping(value = "/search")
-    public List<ClientResponse> searchClients() {
+    public List<ClienteResponse> searchClients() {
         return clientClient.getClient();
     }
 }

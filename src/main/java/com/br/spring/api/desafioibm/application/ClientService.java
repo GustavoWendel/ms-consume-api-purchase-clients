@@ -1,6 +1,6 @@
 package com.br.spring.api.desafioibm.application;
 
-import com.br.spring.api.desafioibm.infra.clients.ClientFeignClient;
+import com.br.spring.api.desafioibm.infra.clients.ClienteFeignClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ClientService {
 
-    private final ClientFeignClient feignClient;
+    private final ClienteFeignClient feignClient;
 
 
 

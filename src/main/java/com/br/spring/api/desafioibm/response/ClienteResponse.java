@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class ClientResponse {
+public class ClienteResponse {
     private Long id;
 
-    private String name;
+    private String nome;
 
     private String cpf;
 

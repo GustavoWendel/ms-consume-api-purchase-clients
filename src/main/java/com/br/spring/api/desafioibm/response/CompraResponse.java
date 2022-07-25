@@ -21,7 +21,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PurchaseResponse {
+public class CompraResponse {
 
     private @JsonProperty("codigo") String codigo;
 
