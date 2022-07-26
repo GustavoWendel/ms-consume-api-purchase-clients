@@ -1,11 +1,9 @@
 package com.br.spring.api.desafioibm.application;
 
+import com.br.spring.api.desafioibm.response.CompraHandle;
 import com.br.spring.api.desafioibm.response.CompraResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,5 +23,10 @@ public class CompraController {
     @GetMapping("buscar/{ano}")
     public Optional<CompraResponse> buscarMaiorCompraPorAno(@PathVariable("ano") Integer ano) {
         return compraService.getCompraByAno(ano);
+    }
+
+    @GetMapping("buscar/clientes-fieis")
+    public List<CompraHandle> buscarMaiorCompraPorCliente() {
+        return compraService.getCompraMaiorPorCliente();
     }
 }

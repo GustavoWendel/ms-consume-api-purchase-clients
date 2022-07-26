@@ -11,6 +11,6 @@ import java.util.List;
 public interface CompraClient {
 
     @GetMapping
-    List<CompraResponse> getAllPurchases();
+    List<CompraResponse> getCompras();
 
 }

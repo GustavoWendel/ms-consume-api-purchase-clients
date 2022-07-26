@@ -11,13 +11,13 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/clients")
-public class ClientController {
+@RequestMapping("/clientes")
+public class ClienteController {
 
     private final ClienteFeignClient clientClient;
 
     @GetMapping(value = "/search")
-    public List<ClienteResponse> searchClients() {
+    public List<ClienteResponse> buscarClientes() {
         return clientClient.getClient();
     }
 }
