@@ -49,27 +49,8 @@ public class CompraService {
         listaHandle.sort(Comparator.comparing(CompraHandle::getTotalCompras).reversed()
                 .thenComparing(CompraHandle::mediaCompras));
 
-        findTopK(compras, )
-
         return listaHandle;
     }
 
 
-    public List<Integer> findTopK(List<Integer> input, int k) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
-
-        input.forEach(number -> {
-            maxHeap.add(number);
-
-            if (maxHeap.size() > k) {
-                maxHeap.poll();
-            }
-        });
-
-        List<Integer> topKList = new ArrayList<>(maxHeap);
-        Collections.reverse(topKList);
-
-        return topKList;
-
-
-    }
+}
