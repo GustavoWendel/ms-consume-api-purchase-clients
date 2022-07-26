@@ -46,11 +46,30 @@ public class CompraService {
             listaHandle.add(new CompraHandle(entry.getKey(), entry.getValue()));
         }
 
-        listaHandle.sort(Comparator.comparing(CompraHandle::getTotalCompras)
-                .thenComparing(CompraHandle::mediaCompras).reversed());
+        listaHandle.sort(Comparator.comparing(CompraHandle::getTotalCompras).reversed()
+                .thenComparing(CompraHandle::mediaCompras));
 
-        listaHandle.subList(1, 3).forEach(CompraHandle::getCliente);
+        findTopK(compras, )
+
         return listaHandle;
     }
 
-}
+
+    public List<Integer> findTopK(List<Integer> input, int k) {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+
+        input.forEach(number -> {
+            maxHeap.add(number);
+
+            if (maxHeap.size() > k) {
+                maxHeap.poll();
+            }
+        });
+
+        List<Integer> topKList = new ArrayList<>(maxHeap);
+        Collections.reverse(topKList);
+
+        return topKList;
+
+
+    }
